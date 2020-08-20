@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ji-tslib8": [
+        "dist/ji-tslib8"
+      ],
+      "ji-tslib8/*": [
+        "dist/ji-tslib8/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
