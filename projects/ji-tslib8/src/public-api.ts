@@ -2,7 +2,7 @@
  * Public API Surface of ji-tslib8
  */
 
-export * from './utils/utl.service';
+export * from './utils/ji-utl.service';
 export * from './components/blockable-div';
 export * from './components/ji-charfilteredfield';
 export * from './components/ji-checkbox';

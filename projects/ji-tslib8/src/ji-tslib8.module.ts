@@ -49,7 +49,7 @@ import {CharFilterDirective} from "./directives/charFilter-directive";
 import {JiDropdown} from "./components/ji-dropdown";
 import {JiErrorDialog} from "./errors/ji-error-dialog";
 import {JiJoblogDialogComponent} from "./ji-joblog-dialog/ji-joblog-dialog.component";
-import {UtlService} from "./utils/utl.service";
+import {JiUtlService} from "./utils/ji-utl.service";
 
 @NgModule({
             declarations: [BlockableDiv,
@@ -128,7 +128,7 @@ import {UtlService} from "./utils/utl.service";
                       JiTextfieldm,
                       ProgressOverlay],
             providers: [
-              UtlService
+              JiUtlService
             ]
           })
 export class JiTslib8Module {}

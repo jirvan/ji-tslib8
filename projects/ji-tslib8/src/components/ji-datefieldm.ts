@@ -29,7 +29,7 @@
  */
 
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {UtlService} from "../utils/utl.service";
+import {JiUtlService} from "../utils/ji-utl.service";
 
 @Component({
              selector: 'ji-datefieldm',
@@ -53,7 +53,7 @@ export class JiDatefieldm {
   private _cModel?: string;
   _dateModel?: Date;
 
-  constructor(public utl: UtlService) {}
+  constructor(public ji: JiUtlService) {}
 
   @Input()
   get cModel() {
@@ -74,7 +74,7 @@ export class JiDatefieldm {
 
   set dateModel(val: Date | undefined) {
     this._dateModel = val;
-    this._cModel = this.utl.toDateString(val);
+    this._cModel = this.ji.toDateString(val);
     this.cModelChange.emit(this._cModel);
   }
 

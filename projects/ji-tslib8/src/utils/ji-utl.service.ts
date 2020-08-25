@@ -29,9 +29,30 @@
  */
 
 import {Injectable} from '@angular/core';
+import {SelectItem} from 'primeng/api';
 
 @Injectable()
-export class UtlService {
+export class JiUtlService {
+
+  private extractSelectItemsList(allItemsLabel: string, labelField: string, objectsToFilter): SelectItem[] {
+
+    // Get a sorted set of label/values
+    const set = new Set<string>();
+    for (const object of objectsToFilter) {
+      set.add(object[labelField]);
+    }
+    const sortedLabelValues: string[] = Array.from(set).sort();
+
+    // Build and return select items
+    const selectItems: SelectItem[] = [
+      {label: allItemsLabel, value: null}
+    ];
+    for (const labelValue of sortedLabelValues) {
+      selectItems.push({label: labelValue, value: labelValue});
+    }
+    return selectItems;
+
+  }
 
   public toDateString(date?: Date | string): string | undefined | null {
     if (date === undefined) {
