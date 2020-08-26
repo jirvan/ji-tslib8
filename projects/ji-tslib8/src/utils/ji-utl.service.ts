@@ -34,7 +34,7 @@ import {SelectItem} from 'primeng/api';
 @Injectable()
 export class JiUtlService {
 
-  private extractSelectItemsList(allItemsLabel: string, labelField: string, objectsToFilter): SelectItem[] {
+  public extractSelectItemsList(allItemsLabel: string, labelField: string, objectsToFilter): SelectItem[] {
 
     // Get a sorted set of label/values
     const set = new Set<string>();
